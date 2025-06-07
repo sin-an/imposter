@@ -32,7 +32,7 @@ let displayText = "";
 let showText = true;
 
 function setup() {
-  createCanvas(710, 400);
+  createCanvas(windowWidth-windowWidth*0.1, windowHeight-windowHeight*0.1);
   background(255);
 
   // Use the greeting variable to ask for the person's name.
@@ -41,22 +41,22 @@ function setup() {
 
   // Create the input and button in the canvas.
   playerInput = createInput();
-  playerInput.position(20, 55);
+  playerInput.position(20, greeting.y+greeting.height + playerInput.height);
 
   button = createButton('submit');
-  button.position(playerInput.x + playerInput.width, 55);
+  button.position(playerInput.x + playerInput.width, greeting.y+greeting.height + playerInput.height);
   
   wordListText = createElement("h2", "Words to add")
-  wordListText.position(20, 100)
+  wordListText.position(20, button.y+button.height + wordListText.height)
   
   wordListInput = createInput("Apfel, Birne, Katze")
-  wordListInput.position(20, 150)
+  wordListInput.position(20, wordListText.y+wordListText.height + wordListInput.height)
   
   wordListButton1 = createButton("append")
-  wordListButton1.position(wordListInput.x + wordListInput.width, 150)
+  wordListButton1.position(wordListInput.x + wordListInput.width, wordListText.y+wordListText.height + wordListInput.height)
   
   wordListButton2 = createButton("overwrite")
-  wordListButton2.position(wordListInput.x + wordListInput.width + wordListButton1.width, 150)
+  wordListButton2.position(wordListInput.x + wordListInput.width + wordListButton1.width, wordListText.y+wordListText.height + wordListInput.height)
 
   button.mousePressed(game);
   wordListButton1.mousePressed(() => appendList(wordListInput.value()))
@@ -106,7 +106,7 @@ function game() {
 
   
   for(let i = 0; i < players.length; i++){
-    playerButtons[i].position(10+i*40,10, 30)
+    playerButtons[i].position(windowWidth*0.2+i*70, 50)
   }
 }
 
