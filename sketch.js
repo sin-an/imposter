@@ -68,9 +68,11 @@ function setup() {
 
 function draw(){
   background(255)
+  console.log("everstime")
   if (showText) {
+    console.log("show")
     textSize(32);
-    fill(255);
+    fill(0);
     textAlign(CENTER, CENTER);
     text(displayText, width / 2, height / 2);
   }
@@ -79,7 +81,7 @@ function draw(){
 function game() {
   
   word = random(germanWords)
-  background(100,100,100);
+  background(255);
   greeting.remove()
   playerInput.remove()
   button.remove()
