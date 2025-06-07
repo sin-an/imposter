@@ -1,7 +1,45 @@
-html, body {
-  margin: 0;
-  padding: 0;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+  padding:none;
+  color: #333;
 }
-canvas {
-  display: block;
+
+h2 {
+  font-weight: 600;
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 1rem;
+  letter-spacing: 0.03em;
+}
+
+input[type="text"] {
+  width: 250px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  outline-offset: 2px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+input[type="text"]:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 8px rgba(74, 144, 226, 0.4);
+}
+
+button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 0.65rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(74, 144, 226, 0.3);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+button:hover {
+  background-color: #357ABD;
+  box-shadow: 0 6px 14px rgba(53, 122, 189, 0.4);
 }
